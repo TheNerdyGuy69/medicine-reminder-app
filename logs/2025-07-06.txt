@@ -1,0 +1,12 @@
+#What I built :
+I bulit my first api and worked with POSTMAN which was really amazing.
+Made the medicine add route which was a little overwhelming but i learned from it.
+
+#What went wrong:
+I made a mistake in typing the url in postman's software I accedentaly added a space in the url and that ruined everything.LOL but i learned from it.
+
+#What I fixed:
+I made sure that the url is not with any extra space and made sure that my server was running all right.
+
+#What surprised me:
+I didn't know that coding actually teaches you a lot rather than just watching the video and typing what the guy does. It was really amazing doing things by your hands and when they works it's a very nice feeling.
