@@ -11,6 +11,11 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected ✅"))
+  .catch((err) => console.error("MongoDB connection error:", err));
+
+
 app.post("/api/medicines/add", async (req, res) => {
   try {
     const { name, time, date, userEmail } = req.body;
@@ -28,14 +33,21 @@ app.post("/api/medicines/add", async (req, res) => {
   }
 });
 
+app.get("/api/medicines/:userEmail", async(req,res)=>{
+  const {userEmail} = req.params;
+
+  try{
+    const medicines = await Medicine.find({userEmail});
+    res.status(200).json(medicines);
+  }catch (error){
+    res.status(500).json({message: "Server Error", error: error.message});
+  }
+});
 
 app.get("/api", (req,res)=>{
     res.send("API is running!");
 });
 
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB connected ✅"))
-  .catch((err) => console.error("MongoDB connection error:", err));
 
 app.listen(PORT,()=>{
     console.log(`Server is running on ${PORT}`);
