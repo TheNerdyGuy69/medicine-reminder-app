@@ -1,0 +1,37 @@
+🗓️ Developer Log – July 8, 2025
+✅ What I Did:
+🔧 Integrated GET route from backend into frontend using fetch() and Tailwind UI
+
+🧠 Debugged CORS issues and fixed them using cors middleware in Express
+
+💥 Resolved DOM-related JavaScript error (null target due to missing id)
+
+🎨 Cleaned up UI layout: converted grid → vertical stack using flex-col
+
+🧪 Successfully fetched and displayed medicines from MongoDB on frontend
+
+💾 Pushed full frontend + backend updates to GitHub
+🔗 medicine-reminder-app
+
+⚠️ What Went Wrong:
+Typo in id="medicine-container" caused JS crash
+
+Script ran before DOM loaded → fixed with defer and DOMContentLoaded
+
+🧠 What I Learned:
+CORS middleware is required when fetching across localhost ports
+
+JS document.getElementById() fails silently if the ID doesn’t exist
+
+Tailwind flex-col items-center can create clean vertical card layouts
+
+Debugging is not frustrating when you're building with intent
+
+📌 Next Action Plan:
+⏭ Add a form on frontend to POST new medicine reminders
+
+⏭ Connect to /api/medicines/add
+
+⏭ Optional: auto-refresh card list after submission
+
+⏭ Push new updates to GitHub + commit message
